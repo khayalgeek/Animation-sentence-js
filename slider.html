@@ -36,7 +36,7 @@
     <script>
         const element = document.getElementById("text-animation");
 
-        let sentence = ['Wake up, Neo...', 'The matrix has you...', 'Follow KhayalBtov on Instagram','Knock, knock, Neo...'];
+        let sentence = ['Wake up, Neo...', 'The matrix has you...', 'Follow KhayalBtov on Instagram', 'Knock, knock, Neo...'];
 
 
         let i = 0, j = 0, wait = 6;
@@ -47,15 +47,14 @@
 
 
             if (i < sentence.length) {
-                if (j
-                
-                 < sentence[i].length) {
+                if (j < sentence[i].length) {
                     element.innerText += sentence[i][j++];
 
                 } else {
                     wait = 8, j = 0; i++;
                 }
-            } else {swq
+            } else {
+                swq
                 wait = 8; i = j = 0;
             }
 
