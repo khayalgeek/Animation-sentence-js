@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000000;
+        }
+
+        #text-animation {
+            font: 500 4rem monospace;
+            background-color: black;
+            color: #86c8a8;
+            text-shadow: .01em .01em .2em #86c8a8;
+        }
+
+        #text-animation::after {
+            content: "|";
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <span id="text-animation"></span>
+
+    <script>
+        const element = document.getElementById("text-animation");
+
+        let sentence = ['Wake up, Neo...', 'The matrix has you...', 'Follow KhayalBtov on Instagram','Knock, knock, Neo...'];
+
+
+        let i = 0, j = 0, wait = 6;
+
+        setInterval(() => {
+            if (wait-- > 0) return;
+            if (wait == -1) element.innerText = "";
+
+
+            if (i < sentence.length) {
+                if (j
+                
+                 < sentence[i].length) {
+                    element.innerText += sentence[i][j++];
+
+                } else {
+                    wait = 8, j = 0; i++;
+                }
+            } else {swq
+                wait = 8; i = j = 0;
+            }
+
+        }, 200);
+    </script>
+</body>
+
+</html>
